@@ -1,0 +1,230 @@
+//task1
+
+import java.util.Scanner;
+
+public class astask1 {
+  public static void main(String [] args){
+    Scanner sc = new Scanner(System.in);
+    int num = sc.nextInt();
+    for(int i = 0; i <= num ; i++){
+      if (i % 5 == 0 && i % 3 != 0){
+        System.out.println(i);
+      }
+    }
+    sc.close();
+  }
+}
+
+//task2
+
+
+public class astask2 {
+  public static void main(String [] args){
+    int sum = 0;
+    for(int i = 0; i <= 600 ; i++){
+      if (i % 7 == 0 && i % 9 != 0){
+        sum += i;
+      } else if (i % 9 == 0 && i % 7 != 0) {
+        sum += i;
+      }
+    }
+    System.out.println(sum);
+  }
+}
+
+
+//task3
+
+import java.util.Scanner;
+
+public class astask3 {
+  public static void main(String [] args){
+    Scanner sc = new Scanner(System.in);
+    int neg = 0;
+    int positive = 0;
+    System.out.print("Enter an integer: ");
+    int num = sc.nextInt();
+    for(int i = 1; i <= num; i++){
+      System.out.print("Enter an number: ");
+      int ennum = sc.nextInt();
+      if (ennum < 0 ) {
+        neg++;
+      } else {
+        positive++;
+      }
+    }
+    System.out.println(positive + " Non-negative Numbers");
+    System.out.println(neg + " Negative Numbers");
+    
+    sc.close();
+  }
+}
+
+
+//task4
+
+
+import java.util.Scanner;
+
+public class astask4 {
+  public static void main(String [] args){
+    Scanner sc = new Scanner(System.in);
+    System.out.print("Input number of terms: ");
+    int num = sc.nextInt();
+    for(int i = 0; i < num ; i++){
+      System.out.println(2*i+1);
+    }
+    sc.close();
+  }
+}
+
+
+//task5
+
+
+import java.util.Scanner;
+
+public class astask5 {
+  public static void main(String [] args){
+    Scanner sc = new Scanner(System.in);
+    int sum = 0;
+    for (int i = 0; i < 10; i++){
+      System.out.print("Enter Number: ");
+      int num = sc.nextInt();
+      sum += num;
+      System.out.println("Sum = " + sum);
+    }
+    sc.close();
+  }
+}
+
+
+//task6
+
+import java.util.Scanner;
+
+public class astask6 {
+  public static void main(String [] args){
+    Scanner sc = new Scanner(System.in);
+    int num = sc.nextInt();
+    for (int i = 1; i <= num; i++){
+      if (num % i == 0){
+        System.out.println(i);
+      }
+    }
+    sc.close();
+  }
+}
+
+
+//task7
+
+import java.util.Scanner;
+
+public class astask7 {
+  public static void main(String [] args){
+    Scanner sc = new Scanner(System.in);
+    int num  = sc.nextInt();
+    int answer = num / 10;  
+    int digits = num % 10; 
+    while (true){ 
+      if ( answer == 0 ) {
+        System.out.print(digits);
+        System.out.println();
+        break;
+      } 
+      else {
+      System.out.print(digits + ", ");
+      }
+      digits = answer  % 10; 
+      answer = answer / 10; 
+      
+      
+
+    
+    sc.close();
+  }
+}
+}
+
+
+//task8
+
+import java.util.Scanner;
+
+public class astask8 {
+  public static void main(String [] args){
+    Scanner sc = new Scanner(System.in);
+    int num  = sc.nextInt();
+    int count = 0;
+    int answer = num / 10;
+    while(true) {
+     if (answer == 0) {
+       count++;
+       break;
+     }
+     else {
+       answer = answer / 10; 
+       count++; 
+     }
+    }   
+    int power = 1;
+    for (int i = 1; i < count; i++){
+      power = power * 10;
+    }
+    int divisor = power; 
+    int divident = num / divisor; 
+
+    int remainder =  num % divisor;
+    while (true) {
+      if (remainder == 0)
+      {
+        System.out.print(divident);
+        System.out.println();
+        break;
+      }
+      System.out.print(divident + ", ");
+      divisor = divisor / 10;
+      divident = remainder / divisor;
+      remainder = remainder % divisor;
+      
+    sc.close();
+}
+}
+}
+
+
+//task9
+
+
+
+import java.util.Scanner;
+
+public class astask9 {
+  public static void main(String [] args){
+    Scanner sc = new Scanner(System.in);
+    int count = 0;
+    int num = sc.nextInt();
+    for (int i = 1; i <= num; i++){
+      if (num % i == 0){
+        count++;
+      }
+    }
+    if (count == 2 ){
+      System.out.println(num + " is a prime number");
+    }
+    else {
+    System.out.println(num + " is not a prime number");
+    int sum = 0;
+    for (int i = 1; i < num; i++){
+      if (num % i == 0) {
+        sum += i;
+      }
+    }
+    if (sum == num) {
+      System.out.println(num + " is a perfect number");
+    }
+    sc.close();
+}
+}
+}

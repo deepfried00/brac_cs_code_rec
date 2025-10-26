@@ -1,0 +1,189 @@
+#task1
+
+import java.util.Scanner; 
+public class as6task1 {
+  public static void main(String [] args) {
+    Scanner sc = new Scanner(System.in);
+    String str1 = sc.nextLine();
+    int vc = 0;
+    int cc = 0;
+    for (int i = 0; i < str1.length(); i++) {
+      if(str1.charAt(i) == 'a' || str1.charAt(i) == 'e' || 
+         str1.charAt(i) == 'i' || str1.charAt(i) == 'o' || 
+         str1.charAt(i) == 'o' || str1.charAt(i) == 'u') {
+        vc++;
+      }
+      else if ((str1.charAt(i) >= 65 && str1.charAt(i) <= 90) 
+                 || (str1.charAt(i) >= 'a' && str1.charAt(i) <= 'z')) {
+        cc++;
+      }
+    }
+    if ( (vc > 0 && cc > 0) && (vc % 3  == 0 && cc % 5 == 0)) {
+      System.out.println("Aaarr! Me Plunder!!");
+    }
+    else {
+      System.out.println("Blimey! No Plunder!!");
+    }
+  }
+}
+
+
+#task2
+
+import java.util.Scanner; 
+public class as6task2 {
+  public static void main(String [] args) {
+    Scanner sc = new Scanner(System.in);
+    String str1 = sc.nextLine();
+    String str2 = sc.nextLine();
+    String answer = "";
+    for (int i = 0; i < str1.length(); i++) {
+      char ch = str1.charAt(i); //a
+       boolean match = false;
+      for (int j = 0; j < str2.length(); j++) {
+        if (ch == str2.charAt(j)){
+          match = true;
+          break;
+        }
+      }
+      if (match == false) {
+        answer += ch;
+      }
+    }
+    for (int i = 0; i < str2.length(); i++){
+      char ch1 = str2.charAt(i); //g
+      boolean match2 = false ;
+      for (int j = 0; j < str1.length(); j++) {
+        if (ch1 == str1.charAt(j)){
+          match2 = true;
+          break;
+        }
+      }
+      if (match2 == false) {
+        answer += ch1;
+      }
+    }
+    String finalAnswer = "";
+    for (int i = 0; i < answer.length(); i++) {
+      if(answer.charAt(i) >= 'a' && answer.charAt(i) <= 'z') {
+        finalAnswer += (char)(answer.charAt(i) - 32);
+      }
+    }
+    System.out.println(finalAnswer);
+          
+  }
+}
+
+#task3
+
+import java.util.Scanner;
+public class as6task3{
+  public static void main(String [] args) {
+    Scanner sc = new Scanner(System.in);
+    String str1 = sc.nextLine();
+    String ans = "";
+    boolean odd = true;
+    for(int i = 0; i < str1.length() ; i++) {
+      char ch = str1.charAt(i) ; //i 
+      if((ch >= 'A' && ch <= 'Z')|| (ch >='a' && ch <='z')) {
+        if(odd == false) {
+          if((i % 2 == 0) && (ch >= 'a' && ch <= 'z')) {
+            ans += (char) (ch - 32);
+          }
+          else {
+            ans += ch;
+          }
+        }
+        else if (odd) {
+          if (i == 0) {
+            ans += (char) (str1.charAt(i) + 32); //I " "
+          }
+          else if((i % 2 != 0) && (ch >= 'a' && ch <= 'z')) {
+            ans += (char) (ch - 32);
+          }
+          else {
+            ans += ch;
+          }
+        }
+      }
+      else {
+        ans += ch;
+        odd = !odd;
+      }
+    }
+    System.out.println(ans);
+  }
+}
+
+
+#task4
+
+import java.util.Scanner;
+
+public class as6task4 {
+  public static void main(String[] args) {
+    Scanner sc = new Scanner(System.in);
+    String str = sc.nextLine();
+    int uc = 0;
+    int lc = 0;
+    int digit = 0;
+    int sp = 0;
+    if(str.length() >= 8 ) {
+      for(int i = 0; i < str.length(); i++) {
+        char ch = str.charAt(i);
+        if(ch >= 'A' && ch <= 'Z') {
+          uc++;
+        }
+        if(ch >= 'a' && ch <= 'z'){
+          lc++;
+        }
+        if(ch >= 0 && ch <= 9){
+          digit++;
+        }
+        else{
+          sp++;
+        }
+      }
+      if( lc > 0 && uc > 0 && sp >0){
+        System.out.println("True");
+      }
+      else {
+        System.out.println("False");
+      }
+    }
+    else {
+      System.out.println("False");
+    }
+  }
+}
+
+#task5
+
+
+import java.util.Scanner;
+
+public class as6task5{
+  public static void main(String[] args) {
+    Scanner sc = new Scanner(System.in);
+    String name = sc.nextLine();
+    String pass = sc.nextLine();
+    String str = "";
+    boolean match = false;
+    for(int i = 0; i < name.length(); i++){
+      char ch = name.charAt(i); //d
+      for(int j = 0; j < pass.length(); j++) {
+        char ch2 = pass.charAt(j);
+        if(ch == ch2) {
+          str+=ch2;
+          break;
+        }
+      }
+    }
+    if(name.equals(str)) {
+      System.out.println("Invalid");
+    }
+    else{
+      System.out.println("Valid");
+    }
+  }
+}

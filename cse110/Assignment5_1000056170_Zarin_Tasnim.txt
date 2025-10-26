@@ -1,0 +1,237 @@
+#task1
+
+import java.util.Scanner;
+
+public class as5task1{
+  public static void main(String [] args) {
+    Scanner sc = new Scanner(System.in);
+    int n = sc.nextInt();
+    for(int i = 1; i <= n; i++) {
+      for (int k = i ; k < n; k++) {
+        System.out.print(" ");
+      }
+      for (int j = 1; j <= 2*i-1; j++) {
+        System.out.print(j);
+      }
+      System.out.println();
+      if( i == n) {
+        for(int k = n-1; k >= 1; k--) {
+          for(int s = k; s < i; s++) {
+            System.out.print(" ");
+          }
+          for(int p = 1; p <= 2*k-1; p++) {
+            System.out.print(p);
+          }
+          System.out.println();
+        }
+        System.out.println();
+      }
+      
+    }
+  }
+}
+
+
+
+#task2
+
+import java.util.Scanner;
+
+public class as5task2{
+  public static void main(String [] args) {
+    Scanner sc = new Scanner(System.in);//5
+    int num = sc.nextInt();
+    for (int i = 1; i <= num; i++) {
+      for (int k = i; k < num; k++) {
+        System.out.print(" ");
+      }
+      for(int j = num - i + 1; j <= num; j++){
+        if( i == 1 || i == num) {
+          System.out.print(j);
+        }
+        else {
+          if (j == num - i + 1 || j == num) {
+            System.out.print(j);
+          }
+          else {
+          System.out.print(" ");
+          }
+        }
+        
+      }
+      System.out.println();
+    }
+  }
+}
+
+    
+
+
+#task3
+
+import java.util.Scanner;
+
+public class as5task3{
+  public static void main(String [] args) {
+    Scanner sc = new Scanner(System.in);
+    int n = sc.nextInt();
+    for(int i = 1; i <= n; i++) {
+      for (int k = i ; k < n; k++) {
+        System.out.print(" ");
+      }
+      for (int j = 1; j <= 2*i-1; j++) {
+        if( i == 1 || i == n) {
+          System.out.print(j);
+        }
+        else {
+          if (j == 1 || j == n) {
+            System.out.print(j);
+          }
+          else {
+          System.out.print(" ");
+          }
+        }
+        
+      }
+      System.out.println();      
+    }
+  }
+}
+
+
+#task4
+
+import java.util.Scanner;
+
+public class as5task4{
+  public static void main(String [] args) {
+    Scanner sc = new Scanner(System.in);
+    int n = sc.nextInt();
+    for(int i = 1; i <= n; i++) {
+      for (int k = i ; k < n; k++) {
+        System.out.print(" ");
+      }
+      for (int j = 1; j <= 2*i-1; j++) {
+        if ( i > 1) {
+          if( j == 1 || j == 2*i-1) {
+            System.out.print(j);
+          }
+          else {
+            System.out.print(" ");
+          }
+        }
+        else {
+        System.out.print(j);
+        }
+      }
+      System.out.println();
+      if( i == n) {
+        for(int k = n-1; k >= 1; k--) {
+          for(int s = k; s < i; s++) {
+            System.out.print(" ");
+          }
+          for(int p = 1; p <= 2*k-1; p++) {
+            if (k > 1) {
+              if(p ==1 || p == 2*k-1) {
+                System.out.print(p);
+              }
+              else {
+                System.out.print(" ");
+              }
+            }
+            else {
+              System.out.print(k);
+            }
+          }
+          System.out.println();
+        }
+        System.out.println();
+      }
+      
+    }
+  }
+}
+
+
+#task5
+
+import java.util.Scanner;
+
+public class as5task5 {
+  public static void main(String [] args) {
+    Scanner sc = new Scanner(System.in);
+    int n = sc.nextInt();
+    for(int row = 1; row <= n; row++) {
+      for (int k = n; k > row; k--) {
+        System.out.print(" ");
+      }
+      for (int col = 1; col <= row; col++){
+        System.out.print(col);
+        if( col == row ) {
+          for(int q = col - 1; q > 0; q--) {
+          System.out.print(q);
+        }
+        }
+      }
+      System.out.println();
+    }
+  }
+}
+
+
+#task6
+
+import java.util.Scanner;
+
+public class as5task6 {
+  public static void main(String [] args) {
+    Scanner sc = new Scanner(System.in);
+    int n = sc.nextInt();
+    for(int row = 1; row <= n; row++) {
+      for (int k = row-1; k > 0; k--) {
+        System.out.print(" ");
+      }
+      for (int col = 1; col <= n - row +1 ; col++){
+        System.out.print(col);
+        if( col == n - row +1 ) {
+          for(int q = col - 1; q > 0; q--) {
+          System.out.print(q);
+        }
+        }
+      }
+      System.out.println();
+    }
+  }
+}
+
+
+#task7
+
+import java.util.Scanner;
+
+public class as5task7 {
+  public static void main(String [] args) {
+    Scanner sc = new Scanner(System.in);
+    int n = sc.nextInt();
+    for(int row = n/2+1; row >=1; row--) {
+      for (int k = row; k<n/2+1; k++) {
+        System.out.print(" ");
+      }
+      for (int col = 1; col <= 2*row-1 ; col++){
+        System.out.print(col);
+        }
+      System.out.println();
+      }
+    for(int row = 1; row <= n/2+1; row++) {
+      if(row > 1) {
+        for (int k = 1; k <= n/2+1 - row; k++) {
+          System.out.print(" ");
+        }
+        for (int col = 1; col <= 2*row-1; col++){
+          System.out.print(col);
+        }
+        System.out.println();
+      }
+    }
+    }
+  }

@@ -1,0 +1,142 @@
+#task1
+
+import java.util.Scanner;
+
+public class as4t1 {
+  public static void main(String [] args) {
+    Scanner sc = new Scanner(System.in);
+    int looptime = sc.nextInt();
+
+    for (int i = 0; i < looptime; i++) {
+      for (int j = 0; j < 1; j++ ) {
+            int sum = 0;
+        int x = sc.nextInt();
+        int y = sc.nextInt();
+        for (int k = 0; k < y; ) {
+          if (x % 2 != 0 ) {
+            sum += x;
+            x++;
+            k++;
+          }
+          else {
+            x++ ;
+          }
+        }
+         System.out.println(sum);
+      }
+     
+     
+    }
+  }
+}
+
+
+#task 2
+
+import java.util.Scanner;
+
+public class as4t2 {
+  public static void main(String [] args) {
+    Scanner sc = new Scanner(System.in);
+    int row = sc.nextInt();
+    int col = sc.nextInt();
+    for (int i = 0; i<row; i++ ) {
+      for ( int j = 1; j <= col; j++) {
+        System.out.print(j + " ");
+      }
+      System.out.println();
+    }
+  }
+}
+
+
+
+#task 3
+
+import java.util.Scanner;
+
+public class as4t3 {
+  public static void main(String [] args) {
+    Scanner sc = new Scanner(System.in);
+    System.out.print("Start: ");
+    int start = sc.nextInt();
+    System.out.println();
+    System.out.print("End: ");
+    int end = sc.nextInt();
+
+    for (int i = start ; i <= end; i++) { //7
+          int count = 0;
+      for (int j = 1 ; j <= i; j++) { // 1 <6
+      if ( i % j == 0 ) { // 5 % 1
+        count++; 
+      }
+      }
+      if ( count == 2) {
+        System.out.println(i);
+      }
+
+    }
+  }
+}
+
+
+#task 4 
+
+import java.util.Scanner;
+
+public class as4t4 {
+  public static void main(String [] args) {
+    Scanner sc = new Scanner(System.in);
+    System.out.print("Number of Customer: ");
+    int customer = sc.nextInt();
+    for (int i = 1; i <= customer; i++ ) {
+      double sum = 0;
+      System.out.print("Item Number of Customer-" + i + ": "); 
+          int itemCount = sc.nextInt();
+      for (int j = 1; j <= itemCount; j++ ) {
+        System.out.println("Item-" + j +":");
+        int price = sc.nextInt();
+        sum += price;
+      }
+      System.out.println("Average of customer-"+i+":" +(sum/itemCount));
+  }
+}
+}
+
+#task 5
+
+import java.util.Scanner;
+
+public class as4t5 {
+  public static void main(String [] args) {
+    Scanner sc = new Scanner(System.in);
+    System.out.print("Start: ");
+    int start = sc.nextInt();
+    System.out.println("End: ");
+    int end = sc.nextInt();
+    System.out.println("Armstrong numbers:");
+    for (int i = start; i <= end; i++){
+      int digitCount = 0;
+      int sum = 0;
+      int div = i ;//100
+      int rem = 10000;
+      while( div > 0){
+        rem = div % 10;
+        digitCount++;//3
+        div = div /10;
+      }
+      int de = i ;
+      int r = 0;
+      for (int j = 0; j< digitCount; j++) {
+        r = de % 10; //0
+        de = de / 10;//10
+        sum += Math.pow(r,digitCount);        
+      }
+      if (sum == i ){
+        System.out.println(sum);
+      }
+     
+     
+    }
+  }
+}
