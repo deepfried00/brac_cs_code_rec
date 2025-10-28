@@ -1,0 +1,21 @@
+import java.util.*;
+
+public class task2 {
+  public static void main(String[] args) {
+    Scanner sc = new Scanner(System.in);
+    String str = "wxyz";   //sc.nextLine()
+    String str2 = "";
+    for(int i = 0; i < str.length() ; i++){
+      if ( str.charAt(i) == 'A') {
+        str2 += 'Z';
+      }
+      else if(str.charAt(i) == 'a') {
+        str2 += 'z';
+      }
+      else {
+      str2 += str.charAt(i) - 1;
+      }
+    }
+    System.out.println(str2);
+  }
+}

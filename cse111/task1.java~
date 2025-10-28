@@ -1,0 +1,22 @@
+import java.util.*;
+
+public class task1{
+  public static void main() {
+    Scanner sc = new Scanner(System.in);
+    int start = sc.nextInt();
+    int end = sc.nextInt();
+    int count = 0;
+    int prime_number = 0;
+    for(int number = start; number <= end; number++){
+      for(int i =0 ;  i < number; i++){
+        if( number / i) {
+          count++;
+        }
+      }
+      if( count == 2) {
+        prime_numbers++;
+      }
+    } 
+    System.out.println("There are "+ prime_numbers + "prime numbers between" + start + end +".");
+  }
+}
