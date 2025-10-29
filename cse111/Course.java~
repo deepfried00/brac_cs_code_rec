@@ -1,0 +1,20 @@
+// template 
+public class Course {
+  public String courseCode;
+  public String courseName;
+  public int courseCredit;
+  public void updateDetails(String n, String c, int d){
+    this.courseCode = c;
+    this.courseName = n;
+    this.courseCredit = d;
+  }
+  public void displayCourse() {
+    System.out.println("Course Name:");
+    System.out.println(courseName);
+    System.out.println(courseCode);
+    System.out.println(courseCredit);
+    
+}
+
+  
+  

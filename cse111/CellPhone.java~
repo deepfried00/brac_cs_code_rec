@@ -1,0 +1,28 @@
+// template 
+
+public class CellPhone{
+  String model = "unknown";
+  int count = 0;
+  String[] arr = new String[3];
+  public void printDetails() {
+    if(count == 0) {
+      System.out.println("Contacts Stored " + count);
+    }
+    else{
+    System.out.println("Phone Model " + model);
+    System.out.println("Contacts Stored " + count);
+    System.out.println("Stored Contacts: ");
+    for(int i =0; i < count; i++){
+      arr[i];
+    }
+    }
+  }
+  public void storeContact(String a) {
+    if(count < 3) {
+    arr[count] = a;
+    count++;
+    System.out.println("Contact Stored");
+    }
+    System.out.println("Memory full. New contact can't be stored.");
+  }
+}
