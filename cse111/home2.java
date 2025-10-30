@@ -1,0 +1,28 @@
+import java.util.*;
+
+public class home2{
+  public static void main(String[] args) {
+    Scanner sc = new Scanner(System.in);
+    int[] arr = {7,13,2,10,6};
+    int small = 0;
+    int big = 0;
+    int spos = 0;
+    int bpos = 0;
+    for(int i = 0; i < arr.length; i++) {
+      if( i == 0) {
+      small = arr[0];
+      big = arr[0]; 
+      }
+      if(small > arr[i]) {
+        small = arr[i];
+        spos= i;
+      }
+      if(big < arr[i]) {
+        big = arr[i];
+        bpos= i;
+      }
+    }
+    System.out.println("The largest number " + big + " was found in" + bpos);
+    System.out.println("The smallest number " + small + " was found in" + spos);
+  }
+}

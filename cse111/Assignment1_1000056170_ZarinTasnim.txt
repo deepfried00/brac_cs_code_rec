@@ -1,0 +1,109 @@
+#task1
+
+import java.util.*;
+
+public class task1{
+  public static void main(String[] args) {
+    Scanner sc = new Scanner(System.in);
+    int nstart = sc.nextInt();
+    int nend = sc.nextInt();
+    int start = 0;
+    int end = 0;
+    if( nstart > nend ) {
+      start = nend;
+      end = nstart;
+    }
+    else {
+      start = nstart;
+      end = nend;
+    }
+    int prime_number = 0;
+    for(int number = start; number <= end; number++){
+          int count = 0;
+      for(int i =1 ;  i <= number; i++){
+        if( number % i == 0) {
+          count++;
+        }
+      }
+      if( count == 2) {
+        prime_number++;
+      }
+    } 
+    System.out.println("There are "+ prime_number + " prime numbers between" + " " + start +" " + end +".");
+  }
+}
+
+
+#task2
+
+import java.util.*;
+
+public class task2 {
+  public static void main(String[] args) {
+    Scanner sc = new Scanner(System.in);
+    String str = sc.nextLine();
+    String str2 = "";
+    for(int i = 0; i < str.length() ; i++){
+      if ( str.charAt(i) == 'A') {
+        str2 += 'Z';
+      }
+      else if(str.charAt(i) == 'a') {
+        str2 += 'z';
+      }
+      else {
+      str2 += (char)( str.charAt(i) - 1);
+      }
+    }
+    System.out.println(str2);
+  }
+}
+
+#task3
+
+import java.util.*;
+
+public class task3{
+  public static void main(String [] args) {
+    Scanner sc = new Scanner(System.in);
+    int size = sc.nextInt();
+    int[] arr = new int[size];
+    for(int i = 0; i < arr.length; i++){
+      arr[i] = sc.nextInt();
+    }
+    int count = 0;
+    for(int i =0; i < arr.length; i++) {
+      boolean flag = false;
+      for(int k = 0; k < i; k++) {
+        if( arr[i] == arr[k]) {
+          flag = true;
+          break;
+        }
+      }
+      if( flag == false) {
+      for(int j = 0; j < arr.length; j++){
+        if ( arr[i] == arr[j]) {
+          count++;
+        }
+      }
+      System.out.println(arr[i] + " - " + count + " times"); 
+        
+        count = 0;
+      }
+      else {
+        continue;
+      }
+    }
+  }
+}
+
+#task4
+
+public class CSECourse
+{
+  String courseName = "Programming Language II";
+  String courseCode = "CSE111";
+  int credit = 3;
+}
+
+
+
