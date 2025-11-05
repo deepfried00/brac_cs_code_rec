@@ -1,0 +1,41 @@
+public class Shape2D {
+  public double area;
+  public String name;
+  public Shape2D(){
+    this.name = "Square";
+    System.out.println("A Square has been created with length: 5");
+    this.area = 5*5;
+  }
+  public Shape2D(int n , int b){
+    this.name = "Rectangle";
+    System.out.println("A Rectangle has been created with length: "+ n +" and breadth: " + b );
+    this.area = n*b;
+  }
+    public Shape2D(int n , int b, String s){
+      this.name = s;
+      System.out.println("A Triangle has been created with height: "+ n +" and base: " + b );
+      this.area = 0.5*n*b;
+  
+  }
+      public Shape2D(int n , int b, int k){
+        this.name = "tri2";
+        System.out.println("A Triangle has been created with the following sides: " + n + ", " + b + " ," + c);
+        double s = (n+b+k)/2;
+        this.area= Math.sqrt(s*(s-n)*(s-b)*(s-k));
+  
+  }
+      public void  area(){
+        if(this.name.equals("Square")){
+          System.out.println("The area of the Square is" + this.area); }
+        if(this.name.equals("Rectangle")){
+          System.out.println("The area of the Rectangle is" + this.area); 
+        }
+        if(this.name.equals("Triangle")){
+        System.out.println("The area of the Triangle is" + this.area); 
+        }
+        if(this.name.equals("tri2")){
+        System.out.println("The area of the Triangle is" + this.area); 
+        }
+        else{}
+      }
+}
