@@ -1,0 +1,51 @@
+public class Connect{
+  int totalAdvice = 0; int count = 0; int cc = 0;
+  Student[] std = new Student[5];
+
+  public void login(Student s){
+    if(s.email.equals("em") || s.pass.equals("em")){
+      System.out.println("Email and password need to be set.");
+    }
+    else {
+      System.out.println("Login successful");
+      s.stat = true;
+      std[count] = s;
+      count++;
+    }
+  }
+  public void advising(Student r){
+    if(r.stat == false){
+      System.out.println("Please login to advise courses!");
+    }
+    else {
+      if(cc == 0){
+        System.out.println("You haven't selected any courses.");
+      }
+    }
+  }
+  public void advising(Student s, String s1, String s2, String s3, String s4){
+    System.out.println("You need special approval to take more than 3 courses.");
+ }
+  public void advising(Student s, String s1, String s2, String s3){
+    if(cc <3){
+      s.course[cc++] = s1;
+      s.course[cc++] = s2;
+      s.course[cc++] = s3;
+    }
+    System.out.println("Advising successful!");
+    totalAdvising++;
+  }
+  
+  public void addAdviseeInfo(){
+    System.out.println("Total Advisee: "+  totalAdvise);
+    for(int i = 0 ; i < totalAdvise; i++){
+    System.out.println("Name: "+ std[i].name + "ID: " + std[i].id + "Department: "+ std[i].dep);
+    System.out.println("Advised Courses: ");
+    for(int j = 0; i< cc; j++){
+      System.out.print(std[i].course[j] + " ");
+    }
+System.out.println();
+System.out.println("==============");
+                       
+  }
+}

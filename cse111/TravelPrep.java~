@@ -1,0 +1,53 @@
+public class TravelPrep{
+  public int price;
+  public String name = "Unknown";
+  int total =0;
+  int count = 0;
+  TravelPrep[] place = new TravelPrep[3];
+  
+  public TravelPrep(){
+    price = 1250;
+    System.out.println(name + " package would cost at most 1250 yen");
+  }
+  public TravelPrep(String s, int n){
+    name = s;
+    price =n;
+    System.out.println(name + " package would cost at most " + price + " yen" );
+  }
+  public TravelPrep(String n, String t){
+    name = n  + t;
+    price = 300;
+    System.out.println(name + " costs " + price + " yen");
+  }
+                      public TravelPrep(String n, String t, int x){
+    name = n  + t;
+    price = x;
+    System.out.println(name + " costs " + price + " yen");
+  }
+                      public void add_to_itinerary(TravelPrep n){
+                        if( total <= price){
+                          if ( count < 3){
+                            total += n.price;
+                            place[count] = n;
+                            count++;
+                          }
+                        }
+                        else {
+                          System.out.println("Budget going overboard");
+                        }
+                      }
+                      public void show_itinerary(){
+                        System.out.println("Itinerary for " + name){
+                          for(int i = 0; i< count; i++){
+                            System.out.println(i + "." + place[i].name + " - " + place[i].price + " yen");
+                          }
+                          System.out.println("Total cost of " + count + " destinations: " + total + "yen" );
+                        }
+                      }
+                      public void updateCost(int n ){
+                      
+                        price += n;
+                        System.out.println("Cost of " + name + " updated to " + price);
+                        
+                      }
+}
